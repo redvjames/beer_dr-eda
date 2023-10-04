@@ -1,2 +1,10 @@
 # beer_dr-eda
 A Project for Data Mining and Wrangling 1 Course of Asian Institute of Management's Master of Science in Data Science 2023 
+
+Beer has become a deep beverage with a very diverse set of flavors. However, when talking about beers, most people use categories based on yeasts, which fail to capture the nuances and flavor profiles of many beers. Given this, our group wanted to see if we can use data science to better describe the unique relationships of a beers ingredients and its properties.
+
+Our data was scraped from Punk API v2, a REST API that connects to a database of beer records with their measurable attributes as well as their ingredients. The ingredients property was represented in the form of a heavily nested JSON file, so it had to be normalized into 3 sparse dataframes. Using this data, dimensionality reduction was performed. First, Principal Component Analysis was done on a dataset containing only the measurable attributes and a dataset containing those attributes with the yeast. Singular Value Decomposition was performed on three datasets: malts, hops, and a full dataset containing both the measurable attributes and ingredients.
+
+We found out that (1) nuttier malts like Carafa and Caramalt contribute to both a darker color and lower attenuation level, meaning higher sugar content, (2) citrussy hops like Amarillo are paired with lighter malts like Extra Pale, and (3) ingredients contributed to explained variance more than numerical columns did. The results of our study could be extended by using clustering methods to identify more categories in beer, or by using information retrieval and recommender systems to help people choose what beer suits them the most.
+
+Finally, we want to recommend the following: (1) consider including the method of preparation as a data type, (2) record at what point the hops were added instead of just the total amount of hops added, and (3) categorize hops according to flavor profile to handle the diversity of hop types.
